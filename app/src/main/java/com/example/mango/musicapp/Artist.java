@@ -3,7 +3,7 @@ package com.example.mango.musicapp;
 public class Artist {
     private String artistsName;
     private String artistsImageUrl;
-    
+
     public Artist(String artistsName, String artistsImageUrl){
         this.artistsImageUrl = artistsImageUrl;
         this.artistsName = artistsName;
