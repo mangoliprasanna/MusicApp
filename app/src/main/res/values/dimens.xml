@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="element_between">10dp</dimen>
+
+    <dimen name="home_header">15dp</dimen>
+
+    <dimen name="constraintPadding">8dp</dimen>
+    <dimen name="base_text_size_header">15sp</dimen>
+    <dimen name="base_text_size">12sp</dimen>
+    <dimen name="artistActivity_bgImage">100dp</dimen>
+    <dimen name="layout_songs_width">120dp</dimen>
+    <dimen name="layout_songs_padding">10dp</dimen>
+    <dimen name="layout_songs_height">150dp</dimen>
+    <dimen name="layout_songs_image_height">110dp</dimen>
+    <dimen name="layout_songs_image1">20dp</dimen>
+    <dimen name="layout_songs_text">7dp</dimen>
+
+    <dimen name="list_listImage">50dp</dimen>
+    <dimen name="nowPlaying_image_h">300dp</dimen>
+    <dimen name="nowPlaying_margin">10dp</dimen>
+    <dimen name="nowPlaying_title">25sp</dimen>
+    <dimen name="nowPlaying_btn">80dp</dimen>
+
+
+    <dimen name="songs_list_h">80dp</dimen>
+    <dimen name="songs_list_p">10dp</dimen>
+    <dimen name="account_image">80dp</dimen>
+    <dimen name="account_name_size">17dp</dimen>
+</resources>

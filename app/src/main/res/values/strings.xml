@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_account">My Account</string>
+    <string name="api_key">6ec25830383be032963ec5907d989f5e</string>
+    <string name="home_treading">Trending Songs</string>
+    <string name="home_artist">Top Artists</string>
+    <string name="home_mymusic">From My Music</string>
+    <string name="home_history">Your History</string>
+    <string name="artistActivity_artist">Similar Artists</string>
+    <string name="artistActivity_track">Top Tracks</string>
+    <string name="artistActivity_album">Top Albums</string>
+    <string name="mainActivity_artist">Top 20 artists</string>
+    <string name="artistsActivity">Artists</string>
+
+    <string name="myMusic">My Music</string>
+
+    <string name="nowPlaying">Now Playing</string>
+    <string name="nowPlaying_similar">Similar Songs</string>
+    <string name="nowPlaying_start">0:00</string>
+    <string name="nowPlaying_end">5:01</string>
+
+    <string name="account_name">Firstname Lastname</string>
+    <string name="account_subscription">Free Member</string>
+    <string name="account_manage">Manage Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NowPlaying">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/trackImage"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nowPlaying_image_h" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nowPlaying_image_h"
+            android:background="@drawable/gradient" />
+
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="@dimen/nowPlaying_btn"
+            android:layout_height="@dimen/nowPlaying_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/element_between"
+            android:layout_marginBottom="@dimen/constraintPadding"
+            android:layout_marginEnd="@dimen/constraintPadding"
+            android:layout_marginLeft="@dimen/constraintPadding"
+            android:layout_marginRight="@dimen/constraintPadding"
+            android:layout_marginStart="@dimen/constraintPadding"
+            android:layout_marginTop="@dimen/constraintPadding"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_pause_circle_outline_black_24dp"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="playPause"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="@dimen/nowPlaying_btn"
+            android:layout_height="@dimen/nowPlaying_btn"
+            android:layout_marginBottom="@dimen/constraintPadding"
+            android:layout_marginEnd="@dimen/constraintPadding"
+            android:layout_marginLeft="@dimen/constraintPadding"
+            android:layout_marginRight="@dimen/constraintPadding"
+            android:layout_marginStart="@dimen/constraintPadding"
+            android:layout_marginTop="@dimen/constraintPadding"
+            android:onClick="nextSong"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_skip_next_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/playButton"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/playButton"
+            app:layout_constraintTop_toTopOf="@+id/playButton" />
+
+        <ImageButton
+            android:layout_width="@dimen/nowPlaying_btn"
+            android:layout_height="@dimen/nowPlaying_btn"
+            android:layout_marginBottom="@dimen/constraintPadding"
+            android:layout_marginEnd="@dimen/constraintPadding"
+            android:layout_marginLeft="@dimen/constraintPadding"
+            android:layout_marginRight="@dimen/constraintPadding"
+            android:layout_marginStart="@dimen/constraintPadding"
+            android:layout_marginTop="@dimen/constraintPadding"
+            android:onClick="priviousSong"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_skip_previous_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/playButton"
+            app:layout_constraintEnd_toStartOf="@+id/playButton"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/playButton" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/element_between"
+            app:layout_constraintTop_toTopOf="@+id/seekBar"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/songsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/nowPlaying_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/artistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/songsName" />
+
+            <ImageView
+                android:id="@+id/songFav"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="35dp"
+                android:onClick="addFav"
+                android:layout_centerVertical="true"
+                android:layout_height="35dp" />
+
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trackImage"
+            tools:layout_editor_absoluteY="192dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/element_between"
+            android:text="@string/nowPlaying_start"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="@dimen/element_between"
+            android:text="@string/nowPlaying_end"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+
+            <TextView
+                android:text="@string/nowPlaying_similar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/element_between"
+                android:textSize="@dimen/base_text_size_header"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/similarSongs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
