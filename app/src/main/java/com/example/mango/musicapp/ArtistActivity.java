@@ -104,14 +104,11 @@ public class ArtistActivity extends AppCompatActivity implements LoaderManager.L
                 List<Artist> allArtists = new ArrayList<>();
                 JSONObject obj =  json.getJSONObject("artist");
                 String artistName = obj.getString("name");
-                String artistUrl = obj.getString("url");
-                String artistListeners = obj.getJSONObject("stats").getString("listeners");
                 String artistSummary = obj.getJSONObject("bio").getString("summary");
                 artistAboutTitle.setText("About " + artistName);
                 artistAboutContent.setText(Html.fromHtml( artistSummary));
 
                 DecimalFormat df = new DecimalFormat("0.00M");
-                artistListeners = df.format( Double.parseDouble(artistListeners)/ 1000000).toString();
                 String artistImageUrl = "";
 
                 // If in case the image is unavalible in JSON, handeling the error.
@@ -121,14 +118,11 @@ public class ArtistActivity extends AppCompatActivity implements LoaderManager.L
                     ex.printStackTrace();
                 }
                 curruntArtist = new Artist(artistName, artistImageUrl);
-                curruntArtist.setArtistSummary(artistSummary);
-
                 JSONArray similarArtist = obj.getJSONObject("similar").getJSONArray("artist");
                 for(int i = 0; i < similarArtist.length(); i++)
                 {
                     obj = similarArtist.getJSONObject(i);
                     artistName = obj.getString("name");
-                    artistUrl = obj.getString("url");
 
                     try {
                         artistImageUrl = obj.getJSONArray("image").getJSONObject(2).getString("#text");
