@@ -141,7 +141,7 @@ public class HomeFragment extends Fragment implements LoaderManager.LoaderCallba
                             ex.printStackTrace();
                         }
 
-                        Artist temp = new Artist(artistName, "", artistImageUrl, "");
+                        Artist temp = new Artist(artistName, artistImageUrl);
                         allArtists.add(temp);
                     }
                     ArtistAdapter artistAdapter = new ArtistAdapter(allArtists, getActivity());

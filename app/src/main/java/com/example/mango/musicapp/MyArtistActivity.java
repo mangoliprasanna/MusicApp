@@ -61,7 +61,7 @@ public class MyArtistActivity extends AppCompatActivity implements LoaderManager
                         ex.printStackTrace();
                     }
 
-                    Artist temp = new Artist(artistName, "", artistImageUrl, "");
+                    Artist temp = new Artist(artistName, artistImageUrl);
                     allArtists.add(temp);
                 }
                 ArtistAdapter artistAdapter = new ArtistAdapter(allArtists, MyArtistActivity.this);

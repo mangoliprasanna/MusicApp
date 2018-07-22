@@ -80,7 +80,6 @@ public class ArtistActivity extends AppCompatActivity implements LoaderManager.L
 
     @Override
     public void onLoadFinished(Loader<String> loader, String s) {
-        Log.w("ArtistJSON", s);
         try
         {
             JSONObject json = new JSONObject(s);
@@ -121,7 +120,7 @@ public class ArtistActivity extends AppCompatActivity implements LoaderManager.L
                 } catch (NullPointerException ex) {
                     ex.printStackTrace();
                 }
-                curruntArtist = new Artist(artistName, artistUrl,artistImageUrl, artistListeners);
+                curruntArtist = new Artist(artistName, artistImageUrl);
                 curruntArtist.setArtistSummary(artistSummary);
 
                 JSONArray similarArtist = obj.getJSONObject("similar").getJSONArray("artist");
@@ -136,7 +135,7 @@ public class ArtistActivity extends AppCompatActivity implements LoaderManager.L
                     } catch (NullPointerException ex) {
                         ex.printStackTrace();
                     }
-                    Artist temp = new Artist(artistName, artistUrl, artistImageUrl, artistListeners);
+                    Artist temp = new Artist(artistName, artistImageUrl);
                     allArtists.add(temp);
                 }
 

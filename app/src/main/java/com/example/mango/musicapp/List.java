@@ -32,8 +32,4 @@ public class List {
     public void setListSubTitle(String listSubTitle) {
         this.listSubTitle = listSubTitle;
     }
-
-    public void setListTile(String listTile) {
-        this.listTile = listTile;
-    }
 }
